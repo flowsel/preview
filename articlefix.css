@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Manrope", sans-serif;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+    width: 750px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 60px;
+    display: flex;
+}
+
+/* Image Cover */
+.image-cover {
+    width: 41%;
+    height: auto;
+    background-image: url(drawers.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px 0 0 12px;
+}
+
+/* Right Section */
+.right-section {
+    width: 59%;
+    padding: 40px;
+}
+
+.right-section h1 {
+    font-weight: 700;
+    font-size: 23px;
+    color: #48556a;
+}
+
+.right-section p {
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #6d7f97;
+}
+
+/* Profile Share */
+.profile-share {
+    display: flex;
+    align-items: center;
+}
+
+/* Profile */
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Avatar */
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Profile Name */
+.profile-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name span:first-of-type {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.profile-name span:last-of-type {
+    color: hsl(212, 23%, 69%);
+}
+
+/* Share Box */
+.share-box {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 13px;
+    color: white;
+    bottom: calc(100% + 10px); /* Posisikan share-box di bawah avatar */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Share Content */
+.share-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.share-content i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.share-content i:hover {
+    color: hsl(212, 23%, 69%);
+}
+
+/* Arrow */
+.arrow {
+    width: 10px;
+    height: 10px;
+    background-color: hsl(217, 19%, 35%);
+    position: absolute;
+    top: calc(100% - 10px); /* Posisikan panah di bawah share-box */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Button */
+button {
+    background-color: hsl(210, 46%, 95%);
+    padding: 10px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: hsl(217, 19%, 35%);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9eafc2;
+    color: hsl(210, 46%, 95%);
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .main-content {
+        margin: 30px;
+        flex-direction: column;
+        width: calc(100% - 60px);
+    }
+
+    .image-cover {
+        width: 100%;
+        height: 300px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile {
+        flex-direction: column; /* Posisikan avatar dan share-box di bawah profile-name */
+    }
+
+    .share-box {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 10px; /* Atur jarak antara avatar dan share-box di mode mobile */
+    }
+
+    .arrow {
+        position: static;
+        transform: rotate(45deg);
+        top: auto;
+        left: auto;
+        margin-top: 5px;
+    }
+}
